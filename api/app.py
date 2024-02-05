@@ -49,6 +49,9 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text="好的，我乖乖閉嘴 > <，如果想要我繼續說話，請跟我說 「說話」 > <"))
         return
+    line_bot_api.reply_message(
+    event.reply_token,
+    TextSendMessage(text=event.message.text))
 
 
 if __name__ == "__main__":
